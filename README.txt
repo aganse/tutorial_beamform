@@ -1,0 +1,11 @@
+Beamforming demonstration/tutorial scripts
+Andy Ganse, APL-UW, Nov 2004
+
+Beamforming is a general signal processing technique used to control the directionality of the reception or transmission of a signal on a transducer array.  Using beamforming you can direct the majority of signal energy you transmit from a group of transducers (like audio speakers or radio antennae) in a chosen angular direction.  Or you can calibrate your group of transducers when receiving signals such that you predominantly receive from a chosen angular direction.  The basic point in beamforming is, when you set multiple transducers next to each other sending out signals, you're going to get some kind of interference pattern, just like you see in a pond when you throw several stones in at once and create interfering ripples.  If you select the spacing between your transducers and the delay in the transducers' signals just right, you can create an interference pattern that's to your benefit, in particular one in which the majority of the signal energy all goes out in one angular direction.
+
+Please see my webpage http://staff.washington.edu/aganse/beamforming/beamforming.html for more of the tutorial discussion, figures, and basic mathematics.  Meanwhile here are the Matlab scripts used to calculate the tutorial plots.
+
+The scripts are polar_interference.m, polar_ang_avg.m, S.m, and sig.m.  The S.m file here is the S(theta,r) function from the math expression on the webpage, and the sig.m file is the s(t) function on the webpage.  The script polar_interference.m creates the colorful interference pattern plots seen on the webpage, while the script polar_ang_avg.m creates the blue-lined beam pattern plots seen on the webpage (both of these scripts call S.m and sig.m).
+
+The two polar* scripts each loop over a number of the online examples, and write .png graphics files of the plots to the current directory. (.png files are similar to .gif files and are viewable in most graphics apps including your web browser.)  However, note the animated plot on the webpage was pieced together manually from a set of these still plots using a separate graphics program.  You'll need your own software for that.
+
